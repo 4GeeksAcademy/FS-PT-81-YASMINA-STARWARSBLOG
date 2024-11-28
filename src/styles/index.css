@@ -1,3 +1,69 @@
 /* 
     General Styles
 */
+.vistahome {
+  background-color: black;
+  margin: 0%;
+  padding: 0%;
+}
+.starnav {
+  background-image: url(https://images.unsplash.com/photo-1520034475321-cbe63696469a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFZpbGxhJTIwZGUlMjBTdGFyJTIwV2Fyc3xlbnwwfHwwfHx8MA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 120px;
+  margin: 0%;
+  padding: 0%;
+}
+.logostar {
+  height: 80px;
+  width: 80px;
+  margin-left: 10rem;
+}
+
+.favbutton {
+  margin-right: 8rem;
+}
+.heart {
+  border-color: orange;
+  color: orange;
+  background-color: white;
+  float: inline-end;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+.learn {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  margin-bottom: 1rem;
+  margin-right: 2.35765%;
+  width: 18rem;
+}
+
+.detallespersona {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #495057;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.detallesplanetas {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #495057;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  flex-wrap: wrap;
+}
