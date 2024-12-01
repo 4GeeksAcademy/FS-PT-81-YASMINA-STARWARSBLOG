@@ -39,9 +39,9 @@
   margin-top: 1rem;
 }
 .card {
-  margin-bottom: 1rem;
-  margin-right: 2.35765%;
-  width: 18rem;
+  flex: 1;
+  margin: 0 10px;
+  max-width: 200px;
 }
 
 .detallespersona {
@@ -66,4 +66,8 @@
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   flex-wrap: wrap;
+}
+.h1home{
+
+  color: whitesmoke;
 }

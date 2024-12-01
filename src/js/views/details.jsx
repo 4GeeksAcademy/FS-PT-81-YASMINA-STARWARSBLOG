@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { DetailsPeople } from "../component/detailsPeople.jsx";
 import { PlanetsDetails } from "../component/planetDetails.jsx"
+import { VehicleDetails } from "../component/vehicleDetails.jsx";
 
 
 
@@ -17,7 +18,10 @@ export const Details = () => {
 
         </div><div className="details">
                 <PlanetsDetails uid={uid} />
-            </div></>
+            </div>
+            <div className="details">
+            <VehicleDetails uid={uid} />
+        </div></>
 
     );
 };

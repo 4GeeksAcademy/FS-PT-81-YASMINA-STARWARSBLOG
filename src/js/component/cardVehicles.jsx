@@ -6,8 +6,8 @@ import { FaRegHeart } from "react-icons/fa";
 
 
 
-export const CardPlanets = ({ planets}) => {
-    const { actions} = useContext(Context);
+export const CardVehicles = ({ vehicles }) => {
+    const { actions } = useContext(Context);
 
 
     return (
@@ -15,19 +15,19 @@ export const CardPlanets = ({ planets}) => {
             <div className="card">
                 <figure className="mb-0">
                     <img
-                        src={`https://starwars-visualguide.com/assets/img/planets/${planets.uid}.jpg`}
-                        alt={planets.name}
+                        src={`https://starwars-visualguide.com/assets/img/vehicles/${vehicles.uid}.jpg`}
+                        alt={vehicles.name}
                         className="card-img-top" />
-                    <figcaption className="text-warning bg-dark" >{planets.name}</figcaption>
+                    <figcaption className="text-warning bg-dark" >{vehicles.name}</figcaption>
                 </figure>
                 <div className="bg-black">
-                    <Link to={`/details/${planets.uid}`} className="btn btn-primary learn  ">
+                    <Link to={`/details/${vehicles.uid}`} className="btn btn-primary learn  ">
                         Learn More
                     </Link>
                     <button className="btn btn-outline-secondary heart "
-                        onClick={() => actions.addFavorite({uid: planets.uid, name: planets.name})}
+                        onClick={() => actions.addFavorite({ uid: vehicles.uid, name: vehicles.name })}
                     >
-                    <FaRegHeart />
+                        <FaRegHeart />
                     </button>
                 </div>
             </div>

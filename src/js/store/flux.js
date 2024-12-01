@@ -11,6 +11,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getPeople: async () => {
 				const store = getStore();
+				if(store.people.length > 0){
+					console.log("personajes guardados en el store")
+					return;
+				}
 				try {
 					const resp = await fetch("https://www.swapi.tech/api/people");
 					if (!resp.ok) throw new Error("error get people");
@@ -22,15 +26,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.error("error obteniendo el personaje");
 				}
 			},
-
-			getPlanets: async () => {
+			
+            getPlanets: async () => {
 				const store = getStore();
 				if(store.planets.length > 0){
 					console.log("planetas guardados store");
 					return;
 				}
 				try {
-					const resp = await fetch("https://www.swapi.tech/api/planets/");
+					const resp = await fetch("https://www.swapi.tech/api/planets");
 					if (!resp.ok) throw new Error("error get planets");
 					const data = await resp.json();
 					setStore({ ...store, planets : data.results });
@@ -39,14 +43,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.error("error obteniendo el planeta");
 				}
 			},
+			getVehicles: async () => {
+				const store = getStore();
+				if(store.vehicles.length > 0){
+					console.log("vehiculos guardados en el store")
+					return;
+				}
+				try {
+					const resp = await fetch("https://www.swapi.tech/api/vehicles");
+					if (!resp.ok) throw new Error("error get vehicle");
+					const data = await resp.json();
+
+					console.log("obteniendo vehiculo:", data.results);
+					setStore({ vehicles: data.results });
+				} catch (error) {
+					console.error("error obteniendo el vehiculo");
+				}
+			},
 
 			getCharacterDetails: async (uid) => {
 				try {
 					const resp = await fetch(`https://www.swapi.tech/api/people/${uid}`);
-					if (!resp.ok) throw new Error("error get details people");
+					if (!resp.ok) throw new Error("error get details personaje");
 					const data = await resp.json();
                     setStore({ characterDetails:{ ...data.result.properties}});
-					console.log("obteniendo detalles personaje:", data.result.properties);
+					console.log("obteniendo detalles vehiculo:", data.result.properties);
+				} catch (error) {
+					console.error(error);
+				}
+			},
+			getVehicleDetails: async (uid) => {
+				try {
+					const resp = await fetch(`https://www.swapi.tech/api/vehicles/${uid}`);
+					if (!resp.ok) throw new Error("error get details vehicle");
+					const data = await resp.json();
+                    setStore({ vheicleDetails:{ ...data.result.properties}});
+					console.log("obteniendo detalles vehiculo:", data.result.properties);
 				} catch (error) {
 					console.error(error);
 				}
