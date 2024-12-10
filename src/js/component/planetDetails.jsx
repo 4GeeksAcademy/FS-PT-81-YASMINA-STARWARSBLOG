@@ -22,17 +22,17 @@ export const PlanetsDetails = () => {
 
 
     return (
-        <div className="card detallesplanetas">
-            <div className=" card d-flex">
+        <div className="detalles">
+            <div className=" d-flex">
                 <figure>
                     <img src={`https://starwars-visualguide.com/assets/img/planets/${uid}.jpg`} 
                       alt ={planet.name} 
-                     className="card-img-top" />
+                     className="img" />
                     <figcaption>
                         {planet.name}
                     </figcaption>
                 </figure>
-                <ul>
+                <ul className="caracteristicas">
                     <li>diameter:{planet?.diameter}</li>
                     <li>rotation_period:{planet?.rotation_period}</li>
                     <li>orbital_period:{planet?.orbital_period}</li>

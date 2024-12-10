@@ -13,8 +13,8 @@ export const CarruselPeople = () => {
     }
 
     const groups = [];
-    for (let i = 0; i < store.people.length; i += 5) {
-        groups.push(store.people.slice(i, i + 5));
+    for (let i = 0; i < store.people.length; i += 4) {
+        groups.push(store.people.slice(i, i + 4));
         console.log("Grupos generados en el carrousel:", groups)
     }
 

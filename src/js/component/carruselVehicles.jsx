@@ -13,8 +13,8 @@ export const CarruselVehicles = () => {
     }
 
     const groups = [];
-    for (let i = 0; i < store.vehicles.length; i += 5) {
-        groups.push(store.vehicles.slice(i, i + 5));
+    for (let i = 0; i < store.vehicles.length; i += 4) {
+        groups.push(store.vehicles.slice(i, i + 4));
         console.log("Grupos generados en el carrousel:", groups)
     }
 

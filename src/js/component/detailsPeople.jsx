@@ -23,17 +23,17 @@ export const DetailsPeople = ({ uid }) => {
 
 
     return (
-        <div className="card detallespersona">
-            <div className=" card d-flex">
+        <div className="detalles">
+            <div className=" d-flex">
                 <figure>
                     <img src={`https://starwars-visualguide.com/assets/img/characters/${uid}.jpg`}
                      alt={character.name}
-                     className="card-img-top" />
+                     className="img d-flex justyfi-" />
                     <figcaption>
                         {character.name}
                     </figcaption>
                 </figure>
-                <ul className="detallespersonaje">
+                <ul className="caracteristicas">
                     <li>birth year:{character?.birth_year}</li>
                     <li>eye color:{character?.eye_color}</li>
                     <li>films:{character?.films}</li>

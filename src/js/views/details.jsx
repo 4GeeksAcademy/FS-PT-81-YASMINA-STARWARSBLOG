@@ -8,20 +8,25 @@ import { VehicleDetails } from "../component/vehicleDetails.jsx";
 
 export const Details = () => {
 
-    const { uid } = useParams();
+    const { uid, type } = useParams();
 
     console.log("UID obtenido desde useParams:", uid);
 
     return (
-        <><div className="details">
-            <DetailsPeople uid={uid} />
-
-        </div><div className="details">
-                <PlanetsDetails uid={uid} />
-            </div>
+        <>
             <div className="details">
-            <VehicleDetails uid={uid} />
-        </div></>
+                {type == "people" &&
+                    <DetailsPeople uid={uid} />
+                }
+                {type == "planet" &&
+                    <PlanetsDetails uid={uid} />
+                }
+                {type == "vehicle" &&
+                    <VehicleDetails uid={uid} />
+                }
+
+            </div>
+        </>
 
     );
 };

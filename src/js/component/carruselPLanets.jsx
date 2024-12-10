@@ -14,8 +14,8 @@ export const CarruselPlanets = () => {
     }
 
     const groups = [];
-    for (let i = 0; i < store.planets.length; i += 5) {
-        groups.push(store.planets.slice(i, i + 5));
+    for (let i = 0; i < store.planets.length; i += 4) {
+        groups.push(store.planets.slice(i, i + 4));
         console.log("Grupos generados en el carrousel:", groups)
     }
 

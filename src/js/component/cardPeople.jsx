@@ -21,7 +21,7 @@ export const CardPeople = ({ character,}) => {
                     <figcaption className="text-warning bg-dark ">{character.name}</figcaption>
                 </figure>
                 <div className="bg-black">
-                    <Link to={`/details/${character.uid}`} className="btn btn-primary learn ">
+                    <Link to={`/details/people/${character.uid}`} className="btn btn-primary learn ">
                         Learn More
                     </Link>
                     <button className="btn btn-outline-secondary heart"

@@ -6,6 +6,7 @@
   margin: 0%;
   padding: 0%;
 }
+
 .starnav {
   background-image: url(https://images.unsplash.com/photo-1520034475321-cbe63696469a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFZpbGxhJTIwZGUlMjBTdGFyJTIwV2Fyc3xlbnwwfHwwfHx8MA%3D%3D);
   background-size: cover;
@@ -15,6 +16,7 @@
   margin: 0%;
   padding: 0%;
 }
+
 .logostar {
   height: 80px;
   width: 80px;
@@ -24,6 +26,7 @@
 .favbutton {
   margin-right: 8rem;
 }
+
 .heart {
   border-color: orange;
   color: orange;
@@ -33,41 +36,33 @@
   margin-right: 1rem;
   margin-top: 1rem;
 }
+
 .learn {
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-top: 1rem;
 }
+
 .card {
   flex: 1;
   margin: 0 10px;
   max-width: 200px;
 }
 
-.detallespersona {
-  position: relative;
+.detalles {
   display: flex;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #495057;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.caracteristicas{
+  color: rgb(165, 14, 14);
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-.detallesplanetas {
-  position: relative;
-  display: flex;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #495057;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-  flex-wrap: wrap;
-}
-.h1home{
-
+.h1home {
   color: whitesmoke;
 }

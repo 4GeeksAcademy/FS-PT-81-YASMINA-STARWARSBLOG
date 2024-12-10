@@ -77,7 +77,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const resp = await fetch(`https://www.swapi.tech/api/vehicles/${uid}`);
 					if (!resp.ok) throw new Error("error get details vehicle");
 					const data = await resp.json();
-                    setStore({ vheicleDetails:{ ...data.result.properties}});
+                    setStore({ vehicleDetails:{ ...data.result.properties}});
 					console.log("obteniendo detalles vehiculo:", data.result.properties);
 				} catch (error) {
 					console.error(error);
@@ -101,7 +101,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ ...store, favorites : []});
 					return;
 				}
-				if (!store.favorites.some((fav) => fav.uid === item.uid)) {
+				if (!store.favorites.some((fav) => fav.name === item.uid)) {
 					setStore({ ...store, favorites: [...store.favorites, item] });
 				} else {
 				console.log("ya esta en fav")

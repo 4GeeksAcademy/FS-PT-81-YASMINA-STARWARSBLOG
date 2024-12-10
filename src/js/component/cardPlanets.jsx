@@ -15,13 +15,15 @@ export const CardPlanets = ({ planets}) => {
             <div className="card">
                 <figure className="mb-0">
                     <img
-                        src={`https://starwars-visualguide.com/assets/img/planets/${planets.uid}.jpg`}
+                        src={planets.uid == 1 ?
+                            `https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357`
+                             :`https://starwars-visualguide.com/assets/img/planets/${planets.uid}.jpg`}
                         alt={planets.name}
                         className="card-img-top" />
                     <figcaption className="text-warning bg-dark" >{planets.name}</figcaption>
                 </figure>
                 <div className="bg-black">
-                    <Link to={`/details/${planets.uid}`} className="btn btn-primary learn  ">
+                    <Link to={`/details/planet/${planets.uid}`} className="btn btn-primary learn  ">
                         Learn More
                     </Link>
                     <button className="btn btn-outline-secondary heart "

@@ -24,17 +24,17 @@ export const VehicleDetails = () => {
  
    
     return (
-        <div className="card detallesvehicle">
-            <div className=" card d-flex">
+        <div className=" detalles">
+            <div className="  d-flex">
                 <figure>
                     <img src={`https://starwars-visualguide.com/assets/img/vehicles/${uid}.jpg`} 
                       alt ={vehicle.name} 
-                     className="card-img-top" />
+                     className="img" />
                     <figcaption>
                         {vehicle.name}
                     </figcaption>
                 </figure>
-                <ul>
+                <ul className="caracteristicas">
                     <li>cargo_capacity:{vehicle?.cargo_capacity}</li>
                     <li>consumables:{vehicle?.consumables}</li>
                     <li>cost_in_credits:{vehicle?.cost_in_credits}</li>

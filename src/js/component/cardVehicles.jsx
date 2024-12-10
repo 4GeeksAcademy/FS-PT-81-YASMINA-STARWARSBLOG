@@ -21,7 +21,7 @@ export const CardVehicles = ({ vehicles }) => {
                     <figcaption className="text-warning bg-dark" >{vehicles.name}</figcaption>
                 </figure>
                 <div className="bg-black">
-                    <Link to={`/details/${vehicles.uid}`} className="btn btn-primary learn  ">
+                    <Link to={`/details/vehicle/${vehicles.uid}`} className="btn btn-primary learn  ">
                         Learn More
                     </Link>
                     <button className="btn btn-outline-secondary heart "
